@@ -62,6 +62,9 @@ bld/
 [Oo]bj/
 [Ll]og/
 
+# Note: build/ directory contains build scripts (.m files) which should be tracked
+# Only ignore build artifacts, not the build/ directory itself
+
 # CMake
 CMakeCache.txt
 CMakeFiles/
@@ -82,7 +85,7 @@ ENV/
 .venv/
 *.egg-info/
 dist/
-build/
+# build/ - commented out to allow build/ directory with MATLAB build scripts
 *.egg
 
 # Jupyter Notebook
