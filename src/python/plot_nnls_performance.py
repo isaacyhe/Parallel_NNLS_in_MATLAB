@@ -8,7 +8,6 @@ across different problem sizes and implementations.
 Usage:
     python plot_nnls_performance.py
 
-Author: Parallel NNLS Team
 Date: 2025
 License: MIT
 """

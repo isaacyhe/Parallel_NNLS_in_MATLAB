@@ -44,13 +44,13 @@ parallel_nnls_in_mpi/
 │   └── python/            # Python utilities
 │       └── plot_nnls_performance.py
 ├── docs/                  # Documentation and papers
-│   └── MCSoC_25_ZHP.pdf
+│   ├── MCSoC_25_ZHP.pdf
+│   └── REFINEMENT_SUMMARY.md
 ├── examples/              # Usage examples
 ├── build/                 # Build system files
 ├── archive/               # Experimental code (archived)
 ├── README.md              # This file
-├── BUILD.md               # Build instructions
-└── REFINEMENT_SUMMARY.md  # Code refinement history
+└── BUILD.md               # Build instructions
 ```
 
 ## Features
@@ -189,7 +189,7 @@ Also applicable to:
 
 ## Development History
 
-This repository contains refined, production-ready code. Experimental implementations have been archived in `archive/` for reference. See [`REFINEMENT_SUMMARY.md`](REFINEMENT_SUMMARY.md) for details on improvements made.
+This repository contains refined, production-ready code. Experimental implementations have been archived in `archive/` for reference. See [`docs/REFINEMENT_SUMMARY.md`](docs/REFINEMENT_SUMMARY.md) for details on improvements made.
 
 ## Contributing
 
