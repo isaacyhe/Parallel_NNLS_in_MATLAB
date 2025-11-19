@@ -9,9 +9,8 @@
  *
  * References:
  *   - Lawson, C. L., & Hanson, R. J. (1995). Solving Least Squares Problems. SIAM.
- *   - Zhu et al. (2025). Accelerating Magnetic Particle Imaging with Data Parallelism.
+ *   - Zhu et al. (2025). Accelerating Magnetic Particle Imaging with Data Parallelism: A Comparative Study. Proceedings of IEEE-MCSoC'25.
  *
- * @author Parallel NNLS Team
  * @date 2025
  * @license MIT License
  */

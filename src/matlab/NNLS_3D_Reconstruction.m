@@ -20,10 +20,8 @@ function [] = NNLS_3D_Reconstruction(lambda, num_threads)
 %   NNLS_3D_Reconstruction(0.01, 8)
 %
 % References:
-%   Zhu et al. (2025). Accelerating Magnetic Particle Imaging with
-%   Data Parallelism: A Comparative Study.
+%   Zhu et al. (2025). Accelerating Magnetic Particle Imaging with Data Parallelism: A Comparative Study. Proceedings of IEEE-MCSoC'25.
 %
-% Author: Parallel NNLS Team
 % Date: 2025
 % License: MIT
 

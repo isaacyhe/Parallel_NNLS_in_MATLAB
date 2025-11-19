@@ -14,9 +14,8 @@
  * The solver finds x that minimizes ||Ax - b||^2 subject to x >= 0
  *
  * References:
- *   - Zhu et al. (2025). Accelerating Magnetic Particle Imaging with Data Parallelism.
+ *   - Zhu et al. (2025). Accelerating Magnetic Particle Imaging with Data Parallelism: A Comparative Study. Proceedings of IEEE-MCSoC'25.
  *
- * @author Parallel NNLS Team
  * @date 2025
  * @license MIT License
  */

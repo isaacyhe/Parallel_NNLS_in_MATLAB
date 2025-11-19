@@ -20,7 +20,8 @@ The solvers find **x** that minimizes **||Cx - d||²** subject to **x ≥ 0**.
 
 This implementation is based on the research presented in:
 
-> **Zhu et al. (2025).** "Accelerating Magnetic Particle Imaging with Data Parallelism"
+> **Zhu et al. (2025).** "Accelerating Magnetic Particle Imaging with Data Parallelism: A Comparative Study"
+> Proceedings of IEEE-MCSoC'25
 > Available in: [`docs/MCSoC_25_ZHP.pdf`](docs/MCSoC_25_ZHP.pdf)
 
 ## Directory Structure
@@ -31,8 +32,12 @@ parallel_nnls_in_mpi/
 │   ├── cpu/               # OpenMP CPU implementations
 │   │   ├── nnls_active_set_fp64_omp.cpp
 │   │   ├── nnls_active_set_fp32_omp.cpp
-│   │   └── nnls_gradient_projection_fp64_omp.cpp
+│   │   ├── nnls_gradient_projection_fp64_omp.cpp
+│   │   └── nnls_gradient_projection_fp32_omp.cpp
 │   ├── gpu/               # CUDA GPU implementations
+│   │   ├── nnls_active_set_fp64_cuda.cu
+│   │   ├── nnls_active_set_fp32_cuda.cu
+│   │   ├── nnls_gradient_projection_fp64_cuda.cu
 │   │   └── nnls_gradient_projection_fp32_cuda.cu
 │   ├── matlab/            # MATLAB scripts
 │   │   └── NNLS_3D_Reconstruction.m
@@ -52,16 +57,18 @@ parallel_nnls_in_mpi/
 
 ### CPU Implementations (OpenMP)
 - ✅ Active-Set method (FP32, FP64)
-- ✅ Gradient Projection method (FP64)
+- ✅ Gradient Projection method (FP32, FP64)
 - ✅ Optimized matrix operations
 - ✅ Configurable thread count
 - ✅ MATLAB MEX interface
 
 ### GPU Implementations (CUDA)
-- ✅ Gradient Projection method (FP32)
-- ✅ cuBLAS integration for matrix operations
+- ✅ Active-Set method (FP32, FP64)
+- ✅ Gradient Projection method (FP32, FP64)
+- ✅ Custom CUDA kernels for all operations
+- ✅ Coalesced memory access patterns
 - ✅ Optimized memory transfers
-- ✅ Error checking and validation
+- ✅ Proper CUDA error checking
 
 ### Code Quality
 - ✅ Comprehensive documentation
@@ -100,6 +107,9 @@ parallel_nnls_in_mpi/
 
    % Gradient Projection (FP64, OpenMP)
    mex -R2018a CXXFLAGS='$CXXFLAGS -fopenmp' LDFLAGS='$LDFLAGS -fopenmp' nnls_gradient_projection_fp64_omp.cpp
+
+   % Gradient Projection (FP32, OpenMP)
+   mex -R2018a CXXFLAGS='$CXXFLAGS -fopenmp' LDFLAGS='$LDFLAGS -fopenmp' nnls_gradient_projection_fp32_omp.cpp
    ```
 
 3. **For CUDA implementations:**
@@ -107,7 +117,17 @@ parallel_nnls_in_mpi/
    cd src/gpu/
    ```
    ```matlab
-   mex -R2018a nnls_gradient_projection_fp32_cuda.cu -lcublas
+   % Active-Set (FP64, CUDA)
+   mex -R2018a nnls_active_set_fp64_cuda.cu
+
+   % Active-Set (FP32, CUDA)
+   mex -R2018a nnls_active_set_fp32_cuda.cu
+
+   % Gradient Projection (FP64, CUDA)
+   mex -R2018a nnls_gradient_projection_fp64_cuda.cu
+
+   % Gradient Projection (FP32, CUDA)
+   mex -R2018a nnls_gradient_projection_fp32_cuda.cu
    ```
 
 See [`BUILD.md`](BUILD.md) for detailed build instructions.
@@ -188,9 +208,10 @@ MIT License - see individual source files for headers.
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{zhu2025accelerating,
-  title={Accelerating Magnetic Particle Imaging with Data Parallelism},
+@inproceedings{zhu2025accelerating,
+  title={Accelerating Magnetic Particle Imaging with Data Parallelism: A Comparative Study},
   author={Zhu, et al.},
+  booktitle={Proceedings of the IEEE International Symposium on Multi-Core Systems-on-Chip (MCSoC'25)},
   year={2025}
 }
 ```
