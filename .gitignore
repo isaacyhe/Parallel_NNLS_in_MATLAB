@@ -1,0 +1,145 @@
+# MEX Binary Files
+*.mex
+*.mexa64
+*.mexw64
+*.mexw32
+*.mexmaci64
+*.mexmaca64
+
+# MATLAB Compiled Files
+*.p
+*.asv
+*.autosave
+
+# MATLAB Temporary Files
+*.m~
+
+# Build Artifacts
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# CUDA Build Files
+*.ptx
+*.cubin
+*.fatbin
+
+# Compiled Object files
+*.slo
+*.lo
+
+# Fortran module files
+*.mod
+*.smod
+
+# Visual Studio / MSVC
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.idb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Note: build/ directory contains build scripts (.m files) which should be tracked
+# Only ignore build artifacts, not the build/ directory itself
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+*.egg-info/
+dist/
+# build/ - commented out to allow build/ directory with MATLAB build scripts
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~.nib
+
+# Large Data Files (optional - uncomment if needed)
+# *.mat
+# *.bin
+# *.dat
+
+# Test Output
+test_output/
+results/
+*.log
+
+# Documentation Build (if using Sphinx/Doxygen)
+docs/_build/
+docs/html/
+docs/latex/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z

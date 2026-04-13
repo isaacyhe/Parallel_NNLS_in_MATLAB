@@ -1,0 +1,4 @@
+# System_Matrix_3D.csv files are generated from PSF CSVs via generate_system_matrix.m.
+# They range from 1 MB (PSF21) to 8.2 GB (PSF201) and should not be committed.
+# Run:  generate_system_matrix(131)  to create one locally.
+psf_*/System_Matrix_3D.csv
