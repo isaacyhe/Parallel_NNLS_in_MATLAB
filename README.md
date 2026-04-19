@@ -1,4 +1,4 @@
-# Parallel NNLS for MPI
+# Parallel NNLS in MATLAB
 
 This repository contains MEX (MATLAB Executable) implementations of high-performance Non-Negative Least Squares (NNLS) solvers accelerated on multicore CPU (OpenMP) and GPU (CUDA).
 It accompanies a peer-reviewed conference paper and is mainly used for Magnetic Particle Imaging reconstruction in MATLAB.
